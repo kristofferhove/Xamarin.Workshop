@@ -10,8 +10,8 @@ namespace Xamarin.Core.Services
     public class CloudService
     {
         //Test
-        private readonly string serviceUrl = "http://trafikkagent-test.azure-mobile.net/";
-        private readonly string appKey = "CGTtzIseKnbjKyARkpZwDZahJOKwKo46";
+        private readonly string serviceUrl = "https://xamarinworkshop.azure-mobile.net/";
+        private readonly string appKey = "AvPsdAyZoCFqltPAOOMBqFNcczEDYx22";
 
         public CloudService()
         {

@@ -11,5 +11,19 @@ namespace Xamarin.Core.ViewModels
 			get { return _hello; }
 			set { _hello = value; RaisePropertyChanged(() => Hello); }
 		}
+
+        public MvxCommand AddItemCommand
+        {
+            get
+            {
+                return new MvxCommand(AddItem);
+            }
+        }
+
+        private void AddItem()
+        {
+            var test = Hello;
+            var test1 = 1;
+        }
     }
 }
