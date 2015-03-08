@@ -56,3 +56,7 @@ C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.iOS\obj\iPhoneSimulator\Debug\Xa
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.iOS\obj\iPhoneSimulator\Debug\Default-568h@2x.png
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.iOS\obj\iPhoneSimulator\Debug\Add-New.png
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.iOS\obj\iPhoneSimulator\Debug\Add-New-pressed.png
+C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.iOS\bin\iPhoneSimulator\Debug\Cirrious.MvvmCross.Plugins.Messenger.dll
+C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.iOS\bin\iPhoneSimulator\Debug\Microsoft.WindowsAzure.Mobile.SQLiteStore.dll
+C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.iOS\bin\iPhoneSimulator\Debug\SQLitePCL.dll
+C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.iOS\bin\iPhoneSimulator\Debug\SQLitePCL.Ext.dll

@@ -2,6 +2,7 @@
 using Cirrious.MvvmCross.Touch.Platform;
 using Cirrious.MvvmCross.ViewModels;
 using Microsoft.WindowsAzure.MobileServices;
+using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
 using Foundation;
 using UIKit;
 
@@ -23,6 +24,7 @@ namespace Xamarin.iOS
             startup.Start();
 
             CurrentPlatform.Init();
+            SQLitePCL.CurrentPlatform.Init(); 
 
             _window.MakeKeyAndVisible();
 

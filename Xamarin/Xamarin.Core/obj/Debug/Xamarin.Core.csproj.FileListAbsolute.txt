@@ -46,3 +46,6 @@ C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Core\obj\Debug\Xamarin.Core.cspr
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Core\obj\Debug\Xamarin.Core.csprojResolveAssemblyReference.cache
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Core\obj\Debug\Xamarin.Core.dll
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Core\obj\Debug\Xamarin.Core.pdb
+C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Core\bin\Debug\Cirrious.MvvmCross.Plugins.Messenger.dll
+C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Core\bin\Debug\Microsoft.WindowsAzure.Mobile.SQLiteStore.dll
+C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Core\bin\Debug\SQLitePCL.dll
