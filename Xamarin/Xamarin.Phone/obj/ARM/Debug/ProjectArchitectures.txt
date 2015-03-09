@@ -1,0 +1,2 @@
+C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Core\Xamarin.Core.csproj;neutral
+C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Phone\Xamarin.Phone.csproj;arm

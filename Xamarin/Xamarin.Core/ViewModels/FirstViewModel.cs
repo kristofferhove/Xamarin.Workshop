@@ -30,9 +30,6 @@ namespace Xamarin.Core.ViewModels
             _messenger = messenger;
             _itemGenesisService = itemGenesisService;
 
-            
-
-
             client = new MobileServiceClient(applicationURL, applicationKey);
             toDoTable = client.GetSyncTable<Item>();
 
@@ -44,44 +41,45 @@ namespace Xamarin.Core.ViewModels
             //}
 
             //ToDoList = newList;
-            toDoTable = client.GetSyncTable<Item>();
-            InitializeStoreAsync();
-            RefreshAsync();
+            //var test = 1;
+            InitializeStore().Wait();
+            Refresh().Wait();
             
 	    }
 
-        private async Task RefreshAsync()
+        private async Task Refresh()
         {
             ToDoList = await toDoTable.ToListAsync();
+            var test = 1;
         }
 
-        public async Task InitializeStoreAsync()
+        public async Task InitializeStore()
         {
             var store = new MobileServiceSQLiteStore(localDbPath);
             store.DefineTable<Item>();
             await client.SyncContext.InitializeAsync(store);
         }
 
-        public async Task SyncAsync()
-        {
-            try
-            {
-                await client.SyncContext.PushAsync();
-                await toDoTable.PullAsync("allTodoItems", toDoTable.CreateQuery()); // query ID is used for incremental sync
-            }
+        //public async Task SyncAsync()
+        //{
+        //    try
+        //    {
+        //        await client.SyncContext.PushAsync();
+        //        await toDoTable.PullAsync("allTodoItems", toDoTable.CreateQuery()); // query ID is used for incremental sync
+        //    }
 
-            catch (MobileServiceInvalidOperationException e)
-            {
-                var failed = e.Message;
-                var readover = -1;
-            }
-        }
+        //    catch (MobileServiceInvalidOperationException e)
+        //    {
+        //        var failed = e.Message;
+        //        var readover = -1;
+        //    }
+        //}
 
         public async Task<List<Item>> RefreshDataAsync()
         {
             try
             {
-                await SyncAsync();
+                //await SyncAsync();
                 ToDoList = await toDoTable.ToListAsync();
             }
             catch (MobileServiceInvalidOperationException e)
@@ -99,7 +97,7 @@ namespace Xamarin.Core.ViewModels
             try
             {
                 await toDoTable.InsertAsync(item); // Insert a new TodoItem into the local database. 
-                await SyncAsync(); // send changes to the mobile service
+                //await SyncAsync(); // send changes to the mobile service
 
                 ToDoList.Add(item);
 
@@ -134,12 +132,12 @@ namespace Xamarin.Core.ViewModels
             }
         }
 
-        private void AddItem()
+        private async void AddItem()
         {
             var newlist = ToDoList;
             var insertItem = _itemGenesisService.addItem(Hello);
             newlist.Add(insertItem);
-            InsertTodoItemAsync(insertItem);
+            await InsertTodoItemAsync(insertItem);
             ToDoList = newlist;
             _messenger.Publish(new ReloadData(this));
         }

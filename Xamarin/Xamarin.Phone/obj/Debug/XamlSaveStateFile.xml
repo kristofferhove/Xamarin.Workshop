@@ -1,0 +1,18 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <ReferenceAssembly PathName="c:\privaterepo\xamarin.workshop\xamarin\packages\mvvmcross.hottuna.crosscore.3.5.0\lib\wpa81\cirrious.crosscore.dll" HashGuid="db02cb3b-2fbd-1071-04b9-b7ad2d0dea05" />
+    <ReferenceAssembly PathName="c:\privaterepo\xamarin.workshop\xamarin\packages\mvvmcross.hottuna.crosscore.3.5.0\lib\wpa81\cirrious.crosscore.windowscommon.dll" HashGuid="33137c4e-381b-0828-9fcf-2ac3014e11f4" />
+    <ReferenceAssembly PathName="c:\privaterepo\xamarin.workshop\xamarin\packages\mvvmcross.hottuna.mvvmcrosslibraries.3.5.0\lib\wpa81\cirrious.mvvmcross.dll" HashGuid="32acf8df-3896-80d1-51eb-8d8719043244" />
+    <ReferenceAssembly PathName="c:\privaterepo\xamarin.workshop\xamarin\packages\mvvmcross.hottuna.crosscore.3.5.0\lib\wpa81\cirrious.mvvmcross.localization.dll" HashGuid="cc169ebc-6f40-271e-a9fe-e2fe4b3425db" />
+    <ReferenceAssembly PathName="c:\privaterepo\xamarin.workshop\xamarin\packages\mvvmcross.hottuna.plugin.messenger.3.5.0\lib\wpa81\cirrious.mvvmcross.plugins.messenger.dll" HashGuid="b95faa80-11cb-a9f9-847e-342ac7012d8e" />
+    <ReferenceAssembly PathName="c:\privaterepo\xamarin.workshop\xamarin\packages\mvvmcross.hottuna.mvvmcrosslibraries.3.5.0\lib\wpa81\cirrious.mvvmcross.windowscommon.dll" HashGuid="61c56896-828d-a020-48f1-b27fc7fe8eca" />
+    <ReferenceAssembly PathName="c:\privaterepo\xamarin.workshop\xamarin\packages\windowsazure.mobileservices.1.3.1\lib\wpa81\microsoft.windowsazure.mobile.dll" HashGuid="9ae27956-fc25-6346-a044-affad933acd5" />
+    <ReferenceAssembly PathName="c:\privaterepo\xamarin.workshop\xamarin\packages\windowsazure.mobileservices.1.3.1\lib\wpa81\microsoft.windowsazure.mobile.ext.dll" HashGuid="d14f6c57-ffca-9ad1-126f-ce93487ab524" />
+    <ReferenceAssembly PathName="c:\privaterepo\xamarin.workshop\xamarin\packages\windowsazure.mobileservices.sqlitestore.1.0.1\lib\portable-win+net45+wp8+wpa81+monotouch+monoandroid\microsoft.windowsazure.mobile.sqlitestore.dll" HashGuid="ae1805b8-0704-33b7-b1fd-509ddf6580d5" />
+    <ReferenceAssembly PathName="c:\privaterepo\xamarin.workshop\xamarin\packages\newtonsoft.json.6.0.4\lib\portable-net45+wp80+win8+wpa81\newtonsoft.json.dll" HashGuid="02b12ba6-881e-6b8a-1687-5b2ee1851a11" />
+    <ReferenceAssembly PathName="c:\privaterepo\xamarin.workshop\xamarin\packages\sqlitepcl.3.8.7.2\lib\wpa81\sqlitepcl.dll" HashGuid="a405761a-bd1d-dc16-54b5-36df2e9981c5" />
+    <ReferenceAssembly PathName="c:\privaterepo\xamarin.workshop\xamarin\packages\microsoft.net.http.2.2.28\lib\wpa81\system.net.http.extensions.dll" HashGuid="794366f8-cc6d-f0fa-3d07-33b45136e193" />
+    <ReferenceAssembly PathName="c:\privaterepo\xamarin.workshop\xamarin\packages\microsoft.net.http.2.2.28\lib\wpa81\system.net.http.primitives.dll" HashGuid="7b71418d-e056-7613-c839-85fb8f6472a6" />
+    <ReferenceAssembly PathName="c:\privaterepo\xamarin.workshop\xamarin\xamarin.core\bin\debug\xamarin.core.dll" HashGuid="c479bea6-8795-1fc2-195b-00ac39ac8f7d" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>
