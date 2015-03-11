@@ -32,9 +32,6 @@
   <Capabilities>
     <Capability Name="internetClientServer" />
   </Capabilities>
-  <Dependencies>
-    <PackageDependency Name="Microsoft.VCLibs.120.00.Phone.Debug" MinVersion="12.0.30113.0" />
-  </Dependencies>
   <build:Metadata>
     <build:Item Name="TargetFrameworkMoniker" Value="WindowsPhoneApp,Version=v8.1" />
     <build:Item Name="VisualStudio" Version="12.0" />
@@ -43,7 +40,6 @@
     <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="12.0.31101.0" />
     <build:Item Name="ProjectGUID" Value="{B911648A-7D2D-4906-824F-1FA912355B47}" />
     <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="12.0.30501.0" />
-    <build:Item Name="SQLite.WP81" Version="3.8.8.3" />
     <build:Item Name="MakePri.exe" Version="6.3.9600.17298 (winblue.141024-1500)" />
   </build:Metadata>
 </Package>

@@ -8,107 +8,61 @@ using Xamarin.Core.Services;
 using Xamarin.Core.Services.Messages;
 using System;
 using System.Threading.Tasks;
-using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
 
 namespace Xamarin.Core.ViewModels
 {
     public class FirstViewModel : MvxViewModel 
     {
-        private readonly IItemGenesisService _itemGenesisService;
         private readonly IMvxMessenger _messenger;
+        private readonly ICloudService _cloudservice;
 
-        private readonly string applicationURL = "https://xamarinworkshop.azure-mobile.net/";
-        private readonly string applicationKey = "AvPsdAyZoCFqltPAOOMBqFNcczEDYx22";
-        const string localDbPath = "localstore.db";
+        //const string applicationURL = @"https://xamarinworkshop.azure-mobile.net/";
+        //const string applicationKey = @"AvPsdAyZoCFqltPAOOMBqFNcczEDYx22";
 
-        public MobileServiceClient client;
-        public IMobileServiceSyncTable<Item> toDoTable;
+        //private MobileServiceClient client;
+        //private IMobileServiceTable<Item> todoTable;// = client.GetTable<Item>();
+        //private MobileServiceCollection<Item, Item> items;
 
-
-        public FirstViewModel (IItemGenesisService itemGenesisService, IMvxMessenger messenger)
+        public FirstViewModel (IMvxMessenger messenger, ICloudService cloudservice)
 	    {
             _messenger = messenger;
-            _itemGenesisService = itemGenesisService;
-
-            client = new MobileServiceClient(applicationURL, applicationKey);
-            toDoTable = client.GetSyncTable<Item>();
+            _cloudservice = cloudservice;
 
             //var newList = new List<Item>();
             //for (var i = 0; i < 10; i++)
             //{
-            //    var newItem = _itemGenesisService.CreateNewItem(i.ToString());
+            //    var newItem = new Item("Element " + i.ToString());
             //    newList.Add(newItem);
             //}
 
             //ToDoList = newList;
-            //var test = 1;
-            InitializeStore().Wait();
-            Refresh().Wait();
-            
 	    }
 
-        private async Task Refresh()
+        public async void RefreshDataAsync()
         {
-            ToDoList = await toDoTable.ToListAsync();
-            var test = 1;
-        }
+            ToDoList = await _cloudservice.RefreshDataAsync();
 
-        public async Task InitializeStore()
-        {
-            var store = new MobileServiceSQLiteStore(localDbPath);
-            store.DefineTable<Item>();
-            await client.SyncContext.InitializeAsync(store);
-        }
+            //try
+            //{
+            //    // update the local store
+            //    // all operations on todoTable use the local database, call SyncAsync to send changes
+            //    //await SyncAsync();
 
-        //public async Task SyncAsync()
-        //{
-        //    try
-        //    {
-        //        await client.SyncContext.PushAsync();
-        //        await toDoTable.PullAsync("allTodoItems", toDoTable.CreateQuery()); // query ID is used for incremental sync
-        //    }
+            //    // This code refreshes the entries in the list view by querying the local TodoItems table.
+            //    // The query excludes completed TodoItems
+            //    //Items = await todoTable.ToListAsync();
+            //    //ToDoList = await todoTable.ToCollectionAsync();// ToCollectionAsync();
 
-        //    catch (MobileServiceInvalidOperationException e)
-        //    {
-        //        var failed = e.Message;
-        //        var readover = -1;
-        //    }
-        //}
+            //    ToDoList = await _cloudservice.RefreshDataAsync();
+            //    var test = 1;
 
-        public async Task<List<Item>> RefreshDataAsync()
-        {
-            try
-            {
-                //await SyncAsync();
-                ToDoList = await toDoTable.ToListAsync();
-            }
-            catch (MobileServiceInvalidOperationException e)
-            {
-                var failed = e.Message;
-                var readover = -1;
-                return null;
-            }
-
-            return ToDoList;
-        }
-
-        public async Task InsertTodoItemAsync(Item item)
-        {
-            try
-            {
-                await toDoTable.InsertAsync(item); // Insert a new TodoItem into the local database. 
-                //await SyncAsync(); // send changes to the mobile service
-
-                ToDoList.Add(item);
-
-            }
-            catch (MobileServiceInvalidOperationException e)
-            {
-               var failed = e.Message;
-               var readover = -1;
-            }
-        }
-
+            //}
+            //catch (MobileServiceInvalidOperationException e)
+            //{
+            //    var error = e.Message;
+            //    var stop = 1;
+            //}
+         }
 
 		private string _hello = "Hello MvvmCross";
         public string Hello
@@ -117,12 +71,19 @@ namespace Xamarin.Core.ViewModels
 			set { _hello = value; RaisePropertyChanged(() => Hello); }
 		}
 
-        private List<Item> _toDoList = new List<Item>();
-        public List<Item> ToDoList 
+        private MobileServiceCollection<Item, Item> _toDoList;
+        public MobileServiceCollection<Item, Item> ToDoList
         {
             get { return _toDoList; }
             set { _toDoList = value; RaisePropertyChanged(() => ToDoList); }
         }
+
+        //private List<Item> _toDoList;
+        //public List<Item> ToDoList
+        //{
+        //    get { return _toDoList; }
+        //    set { _toDoList = value; RaisePropertyChanged(() => ToDoList); }
+        //}
 
         public MvxCommand AddItemCommand
         {
@@ -134,12 +95,10 @@ namespace Xamarin.Core.ViewModels
 
         private async void AddItem()
         {
-            var newlist = ToDoList;
-            var insertItem = _itemGenesisService.addItem(Hello);
-            newlist.Add(insertItem);
-            await InsertTodoItemAsync(insertItem);
-            ToDoList = newlist;
-            _messenger.Publish(new ReloadData(this));
+            var item = new Item { Text = Hello };
+            //ToDoList.Add(item);
+            //_messenger.Publish(new ReloadData(this));
+            ToDoList = await _cloudservice.InsertAsync(item);
         }
     }
 }

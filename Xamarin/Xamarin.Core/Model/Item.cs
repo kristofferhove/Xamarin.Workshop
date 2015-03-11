@@ -8,6 +8,16 @@ namespace Xamarin.Core.Model
 {
     public class Item 
     {
+        public Item(string text)
+        {
+            Text = text;
+        }
+
+        public Item()
+        {
+
+        }
+
         public string Id { get; set; } 
         public string Text { get; set; } 
     }

@@ -14,15 +14,46 @@ namespace Xamarin.Core.Services
         private readonly string applicationURL = "https://xamarinworkshop.azure-mobile.net/";
         private readonly string applicationKey = "AvPsdAyZoCFqltPAOOMBqFNcczEDYx22";
 
-        public MobileServiceClient client;
-        public IMobileServiceSyncTable<Item> toDoTable;
+        private MobileServiceClient client;
+        private IMobileServiceTable<Item> todoTable;
+        private MobileServiceCollection<Item, Item> items;
 
-        public CloudService()
+        public async Task<MobileServiceCollection<Item, Item>> RefreshDataAsync()
         {
-            client = new MobileServiceClient(applicationURL, applicationKey);
-            toDoTable = client.GetSyncTable<Item>();
+            try
+            {
+                using (var client = new MobileServiceClient(applicationURL, applicationKey))
+                {
+                    items = await client.GetTable<Item>().ToCollectionAsync();
+                }
+            }
+            catch (MobileServiceInvalidOperationException e)
+            {
+                var error = e.Message;
+                var stop = 1;
+            }
+
+            return items;
         }
 
-        public int MyProperty { get; set; }
+        public async Task<MobileServiceCollection<Item, Item>> InsertAsync(Item item)
+        {
+            try
+            {
+                using (var client = new MobileServiceClient(applicationURL, applicationKey))
+                {
+                    todoTable = client.GetTable<Item>();
+                    await todoTable.InsertAsync(item);
+                    items = await todoTable.ToCollectionAsync();
+                }
+            }
+            catch (MobileServiceInvalidOperationException e)
+            {
+                var error = e.Message;
+                var stop = 1;
+            }
+
+            return items;
+        }
     }
 }

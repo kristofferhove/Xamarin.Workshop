@@ -5,14 +5,16 @@ using System.Text;
 
 using Foundation;
 using UIKit;
+using Xamarin.Core.Model;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace Xamarin.iOS
 {
     public class TableSource : UITableViewSource
     {
-        List<string> tableItems;
+        MobileServiceCollection<Item, Item> tableItems;
         string cellIdentifier = "TableCell";
-        public TableSource(List<string> items)
+        public TableSource(MobileServiceCollection<Item, Item> items)
         {
             tableItems = items;
         }
@@ -26,7 +28,7 @@ namespace Xamarin.iOS
             // if there are no cells to reuse, create a new one
             if (cell == null)
                 cell = new UITableViewCell(UITableViewCellStyle.Default, cellIdentifier);
-            cell.TextLabel.Text = tableItems[indexPath.Row];
+            cell.TextLabel.Text = tableItems[indexPath.Row].Text;
             return cell;
         }
     }

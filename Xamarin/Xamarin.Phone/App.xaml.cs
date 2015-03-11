@@ -16,9 +16,6 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 
-using Microsoft.WindowsAzure.MobileServices;
-using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
-
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=391641
 
 namespace Xamarin.Phone
@@ -29,10 +26,7 @@ namespace Xamarin.Phone
     public sealed partial class App : Application
     {
         private TransitionCollection transitions;
-        public static MobileServiceClient MobileService = new MobileServiceClient(
-           "https://xamarinworkshop.azure-mobile.net/",
-           "AvPsdAyZoCFqltPAOOMBqFNcczEDYx22"
-       );
+        
 
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code

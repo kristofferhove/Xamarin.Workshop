@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fredrikstad.Forms.Views.ItemsTablePage">
+  <StackLayout>
+    <StackLayout Orientation="Horizontal" HeightRequest="70">
+      <Entry
+        x:Name="Input_field"
+        WidthRequest="200"
+        Placeholder="Skriv her:"/>
+      <Button
+        x:Name="AddItem_btn"
+        WidthRequest="75"
+        Text="+"
+        Clicked="AddItem_btn_clicked"/>
+    </StackLayout>
+    <ListView
+      x:Name="Items_list"
+      ItemsSource="{Binding ItemsList}">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <ViewCell.View>
+              <Label Text="{Binding Text}"/>
+            </ViewCell.View>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+
+</ContentPage>

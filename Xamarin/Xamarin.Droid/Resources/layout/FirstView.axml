@@ -4,16 +4,23 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-  <EditText
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:textSize="40dp"
-    local:MvxBind="Text Hello"
-    />
-  <TextView
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:textSize="40dp"
-    local:MvxBind="Text Hello"
-    />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="270dp"
+            android:layout_height="50dp"
+            android:textSize="20dp"
+            local:MvxBind="Text Hello" />
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/AddNew"
+            local:MvxBind="Click AddItemCommand" />
+    </LinearLayout>
+    <Mvx.MvxListView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        local:MvxBind="ItemsSource ToDoList"
+        local:MvxItemTemplate="@layout/item_template" />
 </LinearLayout>

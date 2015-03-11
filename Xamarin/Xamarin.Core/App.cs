@@ -1,4 +1,6 @@
+using Cirrious.CrossCore;
 using Cirrious.CrossCore.IoC;
+using Xamarin.Core.Services;
 
 namespace Xamarin.Core
 {
@@ -10,7 +12,9 @@ namespace Xamarin.Core
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
-				
+
+            Mvx.LazyConstructAndRegisterSingleton<ICloudService, CloudService>();
+
             RegisterAppStart<ViewModels.FirstViewModel>();
         }
     }
