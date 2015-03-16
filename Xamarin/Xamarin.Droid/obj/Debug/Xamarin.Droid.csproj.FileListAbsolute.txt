@@ -37,7 +37,6 @@ C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Droid\obj\Debug\res\drawable\ico
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Droid\obj\Debug\res\values\splashstyle.xml
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Droid\obj\Debug\res\values\mvxbindingattributes.xml
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Droid\obj\Debug\res\drawable\splash.png
-C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Droid\obj\Debug\res\drawable\addnew.png
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Droid\obj\Debug\R.cs.flag
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Droid\obj\Debug\uploadflags.txt
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Droid\obj\Debug\res\layout\item_template.xml

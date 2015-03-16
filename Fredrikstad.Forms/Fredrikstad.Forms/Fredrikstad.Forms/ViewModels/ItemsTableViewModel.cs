@@ -72,14 +72,5 @@ namespace Fredrikstad.Forms.ViewModels
                 var result = page.DisplayAlert("Error", "Error loading data", "OK", null);
             }
         } 
-
-
-
-
-        //event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-        //{
-        //    add { throw new NotImplementedException(); }
-        //    remove { throw new NotImplementedException(); }
-        //}
     }
 }

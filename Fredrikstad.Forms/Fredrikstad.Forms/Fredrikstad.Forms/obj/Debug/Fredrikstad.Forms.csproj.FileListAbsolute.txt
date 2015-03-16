@@ -19,3 +19,4 @@ C:\PrivateRepo\Xamarin.Workshop\Fredrikstad.Forms\Fredrikstad.Forms\Fredrikstad.
 C:\PrivateRepo\Xamarin.Workshop\Fredrikstad.Forms\Fredrikstad.Forms\Fredrikstad.Forms\obj\Debug\ItemsTablePage.xaml.g.cs
 C:\PrivateRepo\Xamarin.Workshop\Fredrikstad.Forms\Fredrikstad.Forms\Fredrikstad.Forms\obj\Debug\Fredrikstad.Forms.dll
 C:\PrivateRepo\Xamarin.Workshop\Fredrikstad.Forms\Fredrikstad.Forms\Fredrikstad.Forms\obj\Debug\Fredrikstad.Forms.pdb
+C:\PrivateRepo\Xamarin.Workshop\Fredrikstad.Forms\Fredrikstad.Forms\Fredrikstad.Forms\obj\Debug\Fredrikstad.Forms.csprojResolveAssemblyReference.cache

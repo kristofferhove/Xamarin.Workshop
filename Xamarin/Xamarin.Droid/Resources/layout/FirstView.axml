@@ -15,7 +15,7 @@
         <Button
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@drawable/AddNew"
+            android:text="+"
             local:MvxBind="Click AddItemCommand" />
     </LinearLayout>
     <Mvx.MvxListView

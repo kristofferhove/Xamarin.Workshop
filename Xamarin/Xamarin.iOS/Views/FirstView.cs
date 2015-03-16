@@ -14,7 +14,6 @@ using UIKit;
 using Xamarin.Core.Model;
 using Xamarin.Core.Services.Messages;
 using Xamarin.Core.ViewModels;
-using Xamarin.iOS.Services;
 
 namespace Xamarin.iOS.Views
 {
@@ -23,15 +22,11 @@ namespace Xamarin.iOS.Views
     {
         private MvxSubscriptionToken _reloadMessage;
         private UITableView toDoList;
-        private QSTodoService todoService;
 
         public override async void ViewDidLoad()
         {
             View = new UIView { BackgroundColor = UIColor.Red };
             base.ViewDidLoad();
-
-            //todoService = QSTodoService.DefaultService;
-            //await todoService.InitializeStoreAsync();
 
             var messenger = Mvx.Resolve<IMvxMessenger>();
             _reloadMessage = messenger.SubscribeOnMainThread<ReloadData>(ReloadTableView);
@@ -50,11 +45,14 @@ namespace Xamarin.iOS.Views
                 return true;
             };
 
-            var btnAdd = UIButton.FromType(UIButtonType.Custom);
+            //var btnAdd = UIButton.FromType(UIButtonType.Custom);
+            var btnAdd = UIButton.FromType(UIButtonType.RoundedRect);
             btnAdd.Frame = new CGRect((float)UIScreen.MainScreen.Bounds.Width - 50, 17, 20, 20);
-            btnAdd.SetImage(UIImage.FromBundle("Add-New"), UIControlState.Normal);
-            btnAdd.SetImage(UIImage.FromBundle("Add-New-pressed"), UIControlState.Highlighted);
-            btnAdd.SetImage(UIImage.FromBundle("Add-New-pressed"), UIControlState.Selected);
+            btnAdd.SetTitle("+", UIControlState.Normal);
+            btnAdd.SetTitle("-", UIControlState.Highlighted);
+            btnAdd.Font = UIFont.FromName("Helvetica-BoldOblique", 26f);
+            btnAdd.SetTitleColor(UIColor.Black, UIControlState.Normal);
+            btnAdd.SetTitleColor(UIColor.Blue, UIControlState.Highlighted);
             Add(btnAdd);
 
             toDoList = new UITableView(new CGRect(0, 50, (float)UIScreen.MainScreen.Bounds.Width, UIScreen.MainScreen.Bounds.Height - btnAdd.Bounds.Height - txtField.Bounds.Height));
@@ -73,8 +71,6 @@ namespace Xamarin.iOS.Views
 
         private async Task RefreshAsync()
         {
-            //var test = await todoService.RefreshDataAsync();
-            //toDoList.Source = new TableSource(await todoService.RefreshDataAsync());
             var viewModel = (FirstViewModel)ViewModel;
             viewModel.RefreshDataAsync();
             toDoList.ReloadData();

@@ -17,12 +17,6 @@ namespace Xamarin.Phone.Views
             this.InitializeComponent();
         }
 
-        private async void ButtonAdd_Click(object sender, RoutedEventArgs e)
-        {
-            var todoItem = new Item { Text = TextInput.Text };
-            //await InsertTodoItem(todoItem);
-        }
-
         private void Grid_OnLoaded(object sender, RoutedEventArgs e)
         {
             var viewModel = (FirstViewModel)ViewModel;

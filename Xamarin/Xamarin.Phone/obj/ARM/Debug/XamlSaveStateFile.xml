@@ -1,6 +1,6 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\privaterepo\xamarin.workshop\xamarin\xamarin.phone\obj\arm\debug\intermediatexaml\xamarin.phone.exe" HashGuid="533ddebe-46dc-41eb-573c-d630bd00d8c2" />
+    <LocalAssembly PathName="c:\privaterepo\xamarin.workshop\xamarin\xamarin.phone\obj\arm\debug\intermediatexaml\xamarin.phone.exe" HashGuid="bcf35337-dea1-ef5e-b801-71e4472dfc32" />
     <ReferenceAssembly PathName="c:\privaterepo\xamarin.workshop\xamarin\packages\mvvmcross.hottuna.crosscore.3.5.0\lib\wpa81\cirrious.crosscore.dll" HashGuid="db02cb3b-2fbd-1071-04b9-b7ad2d0dea05" />
     <ReferenceAssembly PathName="c:\privaterepo\xamarin.workshop\xamarin\packages\mvvmcross.hottuna.crosscore.3.5.0\lib\wpa81\cirrious.crosscore.windowscommon.dll" HashGuid="33137c4e-381b-0828-9fcf-2ac3014e11f4" />
     <ReferenceAssembly PathName="c:\privaterepo\xamarin.workshop\xamarin\packages\mvvmcross.hottuna.mvvmcrosslibraries.3.5.0\lib\wpa81\cirrious.mvvmcross.dll" HashGuid="32acf8df-3896-80d1-51eb-8d8719043244" />

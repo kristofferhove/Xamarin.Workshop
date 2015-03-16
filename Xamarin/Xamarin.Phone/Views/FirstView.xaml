@@ -46,11 +46,7 @@
     <StackPanel Background="Red" Loaded="Grid_OnLoaded">
         <StackPanel Orientation="Horizontal">
             <TextBox Name="TextInput" Text="{Binding Hello, Mode=TwoWay}" Width="300" BorderThickness="1" BorderBrush="Black"/>
-            <Button Style="{StaticResource AddButtonStyle}"  VerticalAlignment="Top" Command="{Binding AddItemCommand}">
-                <Button.Background >
-                    <ImageBrush ImageSource="/Assets/Add-New.png" Stretch="Uniform"/>
-                </Button.Background>
-            </Button>
+            <Button Content="+" VerticalAlignment="Top" Command="{Binding AddItemCommand}"/>
         </StackPanel>
         <StackPanel>
             <ListBox Name="ToDoListBox" ItemsSource="{Binding ToDoList}">

@@ -40,14 +40,6 @@ C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Phone\obj\ARM\Debug\Xamarin.Phon
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Phone\obj\ARM\Debug\Xamarin.Phone.pdb
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Phone\obj\ARM\Debug\Microsoft.WindowsAzure.Mobile\en-US\Microsoft.WindowsAzure.MobileServices.Resources.resw
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Phone\obj\ARM\Debug\Xamarin.Phone.csproj.GenerateResource.Cache
-C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Phone\obj\ARM\Debug\Microsoft.WindowsAzure.Mobile\layout.resfiles
-C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Phone\obj\ARM\Debug\Microsoft.WindowsAzure.Mobile\layout.resfiles.intermediate
-C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Phone\obj\ARM\Debug\Microsoft.WindowsAzure.Mobile\Resources.resfiles
-C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Phone\obj\ARM\Debug\Microsoft.WindowsAzure.Mobile\Resources.resfiles.intermediate
-C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Phone\obj\ARM\Debug\Microsoft.WindowsAzure.Mobile\pri.resfiles
-C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Phone\obj\ARM\Debug\Microsoft.WindowsAzure.Mobile\pri.resfiles.intermediate
-C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Phone\obj\ARM\Debug\Microsoft.WindowsAzure.Mobile\priconfig.xml
-C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Phone\obj\ARM\Debug\Microsoft.WindowsAzure.Mobile\priconfig.xml.intermediate
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Phone\obj\ARM\Debug\Microsoft.WindowsAzure.Mobile.pri
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Phone\obj\ARM\Debug\Microsoft.WindowsAzure.Mobile\qualifiers.txt
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.Phone\obj\ARM\Debug\priconfig.xml

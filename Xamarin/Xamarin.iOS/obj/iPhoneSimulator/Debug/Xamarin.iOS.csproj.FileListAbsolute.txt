@@ -22,10 +22,8 @@ C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.iOS\bin\iPhoneSimulator\Debug\Mi
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.iOS\bin\iPhoneSimulator\Debug\Newtonsoft.Json.xml
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.iOS\bin\iPhoneSimulator\Debug\System.Net.Http.Extensions.xml
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.iOS\bin\iPhoneSimulator\Debug\System.Net.Http.Primitives.xml
-C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.iOS\obj\iPhoneSimulator\Debug\Default-568h@2x.png
-C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.iOS\obj\iPhoneSimulator\Debug\Add-New.png
-C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.iOS\obj\iPhoneSimulator\Debug\Add-New-pressed.png
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.iOS\obj\iPhoneSimulator\Debug\Xamarin.iOS.csproj.App.config
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.iOS\obj\iPhoneSimulator\Debug\Xamarin.iOS.csprojResolveAssemblyReference.cache
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.iOS\obj\iPhoneSimulator\Debug\XamariniOS.exe
 C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.iOS\obj\iPhoneSimulator\Debug\XamariniOS.pdb
+C:\PrivateRepo\Xamarin.Workshop\Xamarin\Xamarin.iOS\obj\iPhoneSimulator\Debug\
